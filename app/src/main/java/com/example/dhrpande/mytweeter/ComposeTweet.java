@@ -111,7 +111,7 @@ public class ComposeTweet extends AppCompatActivity {
      //    = Uri.parse( url );
 
         TweetComposer.Builder builder = new TweetComposer.Builder(this)
-                .text("Via MyTweeter:")
+                .text("Via @MyTweeterOrg")
                 .image(myImageUri);
         builder.show();
 
