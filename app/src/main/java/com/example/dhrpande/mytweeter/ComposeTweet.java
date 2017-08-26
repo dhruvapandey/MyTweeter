@@ -23,6 +23,8 @@ import static com.example.dhrpande.mytweeter.R.layout.activity_compose_tweet;
 
 //import io.fabric.sdk.android.Fabric;
 
+// Manually have to enable storage permission - FIXIT.
+
 public class ComposeTweet extends AppCompatActivity {
 
     TextView tweetText;
@@ -103,13 +105,13 @@ public class ComposeTweet extends AppCompatActivity {
         Context context;
         context = getBaseContext();
         CapturePhotoUtils capturePhotoUtils = new CapturePhotoUtils();
-        Uri myImageUri = capturePhotoUtils.insertImage(context.getContentResolver(), bmp, "Tweet", "first");
+        Uri myImageUri = capturePhotoUtils.insertImage(context.getContentResolver(), bmp, "Tweet", "second");
 
 
      //    = Uri.parse( url );
 
         TweetComposer.Builder builder = new TweetComposer.Builder(this)
-                .text(myTweet)
+                .text("Via MyTweeter:")
                 .image(myImageUri);
         builder.show();
 

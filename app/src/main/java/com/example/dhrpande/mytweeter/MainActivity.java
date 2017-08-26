@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void failure(TwitterException exception) {
-                Toast.makeText(MainActivity.this,"Failed Bhosdike",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"Login Failed Bose-DK",Toast.LENGTH_LONG).show();
             }
         });
 
