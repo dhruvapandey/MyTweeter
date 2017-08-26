@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.twitter.sdk.android.core.Callback;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     // private static final String TWITTER_KEY = "";
     // private static final String TWITTER_SECRET = "";
     TwitterLoginButton loginButton;
+    TextView headline_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
+
+        headline_text = (TextView) findViewById(R.id.headline_txt);
+        headline_text.setText("Never let your expressions limited to 140 characters");
 
         loginButton = (TwitterLoginButton) findViewById(R.id.login_button);
 

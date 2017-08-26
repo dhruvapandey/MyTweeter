@@ -11,14 +11,14 @@
     <EditText
         android:id="@+id/tweetText"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:gravity="top"
-        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:hint="Type Your Tweet"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:gravity="top"
+        android:hint="Type Your Tweet"/>
 
     <Button
         android:id="@+id/tweetButton"
@@ -28,15 +28,14 @@
         android:text="Tweet"
         tools:layout_editor_absoluteX="256dp"
         tools:layout_editor_absoluteY="540dp"
-        android:layout_above="@+id/tweetImage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_alignBottom="@+id/tweetImage"
+        android:layout_centerHorizontal="true"/>
 
     <ImageView
         android:id="@+id/tweetImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
         android:layout_marginBottom="13dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        />
 </RelativeLayout>

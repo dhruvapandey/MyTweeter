@@ -82,30 +82,12 @@ public class ComposeTweet extends AppCompatActivity {
         final Canvas canvas = new Canvas(bmp);
         mTextLayout.draw(canvas);
 
-        image.setImageBitmap(bmp);
+       // image.setImageBitmap(bmp);
 
-       // Uri contentUri = Uri.fromFile(f);
-
-      /*  File myImageFile = Environment.getExternalStorageDirectory();
-        File file = new File(myImageFile.getAbsolutePath()+"/DCIM/Camera/img.jpg");
-
-        try
-        {
-            file.createNewFile();
-            FileOutputStream ostream = new FileOutputStream(file);
-            bmp.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
-            ostream.close();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-
-        */
         Context context;
         context = getBaseContext();
         CapturePhotoUtils capturePhotoUtils = new CapturePhotoUtils();
-        Uri myImageUri = capturePhotoUtils.insertImage(context.getContentResolver(), bmp, "Tweet", "second");
+        Uri myImageUri = capturePhotoUtils.insertImage(context.getContentResolver(), bmp, "My", "Tweeter");
 
 
      //    = Uri.parse( url );
