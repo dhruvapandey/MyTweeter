@@ -16,7 +16,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
         android:gravity="top"
         android:hint="Type Your Tweet"/>
 
@@ -28,8 +29,8 @@
         android:text="Tweet"
         tools:layout_editor_absoluteX="256dp"
         tools:layout_editor_absoluteY="540dp"
-        android:layout_alignBottom="@+id/tweetImage"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
 
     <ImageView
         android:id="@+id/tweetImage"

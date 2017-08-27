@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     // private static final String TWITTER_SECRET = "";
     TwitterLoginButton loginButton;
     TextView headline_text;
+    TextView tailline_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         headline_text = (TextView) findViewById(R.id.headline_txt);
-        headline_text.setText("Never let your expressions limited to 140 characters");
+        tailline_text = (TextView) findViewById(R.id.tailline_txt) ;
+        headline_text.setText("Don't let your expressions limited to 140 characters");
+        tailline_text.setText( "An Indian Jugaad" );
 
         loginButton = (TwitterLoginButton) findViewById(R.id.login_button);
 
