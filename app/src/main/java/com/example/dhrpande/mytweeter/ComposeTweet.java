@@ -39,7 +39,7 @@ public class ComposeTweet extends AppCompatActivity {
         {
             setColor(Color.WHITE);
             setTextAlign(Paint.Align.LEFT);
-            setTextSize(20f);
+            setTextSize(60f);
             setAntiAlias(true);
         }
     };
@@ -54,13 +54,6 @@ public class ComposeTweet extends AppCompatActivity {
         tweetButton = (Button) findViewById(R.id.tweetButton);
         image = (ImageView) findViewById(R.id.tweetImage);
 
-      //  TwitterAuthConfig authConfig =  new TwitterAuthConfig("consumerKey", "consumerSecret");
-       // Fabric.with(this, new TwitterCore(authConfig), new TweetComposer());
-
-       // TweetComposer.Builder builder = new TweetComposer.Builder(this)
-       //         .text("Hello there ..")
-       //         .image(myImageUri);
-        // builder.show();
     }
 
     public void onClickTweet(View view) {
@@ -68,12 +61,13 @@ public class ComposeTweet extends AppCompatActivity {
         String myTweet = tweetText.getText().toString();
 
         textPaint.getTextBounds(myTweet, 0, myTweet.length(), bounds);
+
         StaticLayout mTextLayout = new StaticLayout(myTweet, textPaint,
                 bounds.width(), Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
         int maxWidth = -1;
         for (int i = 0; i < mTextLayout.getLineCount(); i++) {
             if (maxWidth < mTextLayout.getLineWidth(i)) {
-                maxWidth = (int) mTextLayout.getLineWidth(i);
+                maxWidth = (int) (mTextLayout.getLineWidth(i)) ;
             }
         }
         final Bitmap bmp = Bitmap.createBitmap(maxWidth , mTextLayout.getHeight(),
@@ -82,7 +76,7 @@ public class ComposeTweet extends AppCompatActivity {
         final Canvas canvas = new Canvas(bmp);
         mTextLayout.draw(canvas);
 
-       // image.setImageBitmap(bmp);
+        //image.setImageBitmap(bmp);
 
         Context context;
         context = getBaseContext();
