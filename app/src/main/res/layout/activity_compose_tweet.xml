@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dhrpande.mytweeter.ComposeTweet"
+    tools:context="com.mytweeter.dhrpande.mytweeter.ComposeTweet"
     tools:layout_editor_absoluteY="0dp"
     tools:layout_editor_absoluteX="0dp">
 
@@ -12,25 +12,34 @@
         android:id="@+id/tweetText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="top"
-        android:hint="Type Your Tweet"/>
+        android:layout_marginTop="80dp"
+        android:gravity="start"
+        android:hint="Type Your Tweet"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/tweetImage"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1361855967936104/2613064327">
+    </com.google.android.gms.ads.AdView>
 
     <Button
         android:id="@+id/tweetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickTweet"
-        android:text="Tweet"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="540dp"
+        android:text="Press to Tweet"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"/>
 
     <ImageView
         android:id="@+id/tweetImage"

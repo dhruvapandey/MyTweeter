@@ -1,4 +1,4 @@
-package com.example.dhrpande.mytweeter;
+package com.mytweeter.dhrpande.mytweeter;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -15,12 +15,12 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+public class mytweeterInstrumentedTest {
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.dhrpande.mytweeter", appContext.getPackageName());
+        assertEquals("com.mytweeter.dhrpande.mytweeter", appContext.getPackageName());
     }
 }

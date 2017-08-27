@@ -27,7 +27,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.example.dhrpande.mytweeter"
+        applicationId "com.mytweeter.dhrpande.mytweeter"
         minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
@@ -55,6 +55,7 @@ dependencies {
 }
 dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-ads:11.2.0'
 }
 
 
