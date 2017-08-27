@@ -8,7 +8,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/fab_margin"
                 android:background="#72231F"
-                tools:context="com.mytweeter.dhrpande.mytweeter.MainActivity">
+                tools:context="com.MyTwitter.dhrpande.MyTwitter.MainActivity">
 
     <com.twitter.sdk.android.core.identity.TwitterLoginButton
         android:id="@+id/login_button"
